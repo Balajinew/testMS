@@ -1,4 +1,4 @@
-FROM maven:3.6.0-jdk-8 as build
+FROM maven:3.6.3-jdk-11 as build
 copy pom.xml .
 copy src src
 RUN mvn clean install
