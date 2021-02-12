@@ -3,5 +3,6 @@ copy pom.xml .
 copy src src
 RUN mvn clean install
 ARG JAR_FILE=/target/*.jar
+sh 'ls'
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
